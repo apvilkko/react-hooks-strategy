@@ -4,6 +4,7 @@ import { HookReturnType } from '../types'
 const useMockStrategy = (): HookReturnType => {
   const [isLoading, setIsLoading] = useState(true)
 
+  // Simulate 1 second loading time
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
@@ -13,6 +14,7 @@ const useMockStrategy = (): HookReturnType => {
     }
   }, [])
 
+  // Return mock data
   return {
     data: [
       {

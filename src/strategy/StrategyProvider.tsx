@@ -11,6 +11,10 @@ const StrategyContext = React.createContext<ContextValue>({
   },
 })
 
+/**
+ * Top level provider.
+ * The desired implementation is injected from client.
+ */
 export const StrategyProvider: React.FC<{
   implementation: ContextValue & { ProviderComponent: React.FC }
 }> = ({ implementation, children }) => {

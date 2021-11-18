@@ -4,6 +4,7 @@ import { PostList } from './PostList'
 import { fetchStrategy } from './strategy/fetchStrategy'
 import { mockStrategy } from './strategy/mockStrategy'
 
+// Demonstrates the ability to change the current strategy implementation at runtime.
 export const StrategySwitcherExample = () => {
   const [impl, setImpl] = useState(fetchStrategy)
 
